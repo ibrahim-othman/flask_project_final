@@ -1,0 +1,30 @@
+{
+    "queries": [
+        "\"الذكاء الاصطناعي\""
+    ],
+    "posts_target": 30,
+    "start_date": "2024-05-01",
+    "end_date": "2025-07-05",
+    "RAPIDAPI_KEYS": [
+        "365a180c9cmsh2c983b4806e55cbp1502cfjsnd0c72f4a2d84",
+        "206ee9d1d7msh2b59bff0a507ad3p19b64cjsn9f716eec91d6",
+        "5851b48ca1msha9ed94a094bfd05p1d1d10jsnc55fe56df24e",
+        "b97bca3d18msh514fe8afc88061bp141e64jsn6b4490c5a305",
+        "e656931515mshe502fa853ef69b8p1c11d1jsn2d0831de2e3a",
+        "d9e4fc1ebcmsha0d5ed9eb21ead8p1454f0jsnf0e1a415fb55",
+        "06940bae07msh77a4bf573d1d4f2p1e0e7ajsn04ac99e533c6",
+        "a16bb6c572msh7b45c7f87004140p1e58b3jsncd354df8a232",
+        "963bd76c7dmsha19a0fbcc3234a0p14ccb5jsnffa3ef45b768",
+        "900c6657b2msh5c19530bd2d8e0dp13e274jsnf9302809430f",
+        "29933ad7edmshea00ba5696d922ap1c93c6jsn37d16eba9908",
+        "87d8604d8fmsh5738308d0375b5fp181b33jsn50c672e2acf8",
+        "8838d519d7msha2ed98ab360e5b1p1ef295jsn59da2194186a",
+        "fb4846f4a1msh61ac72679b3877bp1dde30jsncb0ae4639a13",
+        "619afdf18fmshb1ea10f34c173d7p1794b0jsn623384d1738e",
+        "e8b7f8d6d2msh7783a4b7c2294a9p1d791cjsn6e2428795341",
+        "ddf2c45b46msh3594db2467c811bp180277jsn3138586f0b45",
+        "c4522681c5msh9d232ad24ebd374p13661ejsn4904ff47ae96"
+    ],
+    "RAPIDAPI_HOST": "facebook-scraper3.p.rapidapi.com",
+    "posts": "30"
+}

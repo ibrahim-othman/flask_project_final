@@ -1,0 +1,2 @@
+x-rapidapi-key': "b97bca3d18msh514fe8afc88061bp141e64jsn6b4490c5a305",
+    'x-rapidapi-host': "facebook-scraper3.p.rapidapi.com"

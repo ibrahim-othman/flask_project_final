@@ -1,0 +1,29 @@
+[2025-04-07T06:27:00.747+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-07T06:27:00.779+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: monitor_the_api_history_per_day.read_the_api_file_and_add_requests manual__2025-04-07T06:26:47.645537+00:00 [queued]>
+[2025-04-07T06:27:00.801+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: monitor_the_api_history_per_day.read_the_api_file_and_add_requests manual__2025-04-07T06:26:47.645537+00:00 [queued]>
+[2025-04-07T06:27:00.802+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 2
+[2025-04-07T06:27:01.056+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): read_the_api_file_and_add_requests> on 2025-04-07 06:26:47.645537+00:00
+[2025-04-07T06:27:01.065+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=199) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-07T06:27:01.067+0000] {standard_task_runner.py:72} INFO - Started process 212 to run task
+[2025-04-07T06:27:01.068+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'monitor_the_api_history_per_day', 'read_the_api_file_and_add_requests', 'manual__2025-04-07T06:26:47.645537+00:00', '--job-id', '469', '--raw', '--subdir', 'DAGS_FOLDER/monitor_the_api_history_per_day.py', '--cfg-path', '/tmp/tmpmmzzbsso']
+[2025-04-07T06:27:01.070+0000] {standard_task_runner.py:105} INFO - Job 469: Subtask read_the_api_file_and_add_requests
+[2025-04-07T06:27:01.132+0000] {task_command.py:467} INFO - Running <TaskInstance: monitor_the_api_history_per_day.read_the_api_file_and_add_requests manual__2025-04-07T06:26:47.645537+00:00 [running]> on host c10f653d5b77
+[2025-04-07T06:27:01.232+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Esayed' AIRFLOW_CTX_DAG_ID='monitor_the_api_history_per_day' AIRFLOW_CTX_TASK_ID='read_the_api_file_and_add_requests' AIRFLOW_CTX_EXECUTION_DATE='2025-04-07T06:26:47.645537+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-07T06:26:47.645537+00:00'
+[2025-04-07T06:27:01.235+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-04-07T06:27:01.236+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-04-07T06:27:01.236+0000] {logging_mixin.py:190} INFO - Current task name:read_the_api_file_and_add_requests state:running start_date:2025-04-07 06:27:00.780148+00:00
+[2025-04-07T06:27:01.237+0000] {logging_mixin.py:190} INFO - Dag name:monitor_the_api_history_per_day and current dag run status:running
+[2025-04-07T06:27:01.237+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-07T06:27:01.319+0000] {logging_mixin.py:190} INFO - [{'url': 'https://twitter154.p.rapidapi.com/search/search/continuation', 'x-rapidapi-key': 'e656931515mshe502fa853ef69b8p1c11d1jsn2d0831de2e3a', 'x-rapidapi-host': 'twitter154.p.rapidapi.com', 'Avilabe_requests_per_month': 170}, {'url': 'https://twitter154.p.rapidapi.com/search/search/continuation', 'x-rapidapi-key': '365a180c9cmsh2c983b4806e55cbp1502cfjsnd0c72f4a2d84', 'x-rapidapi-host': 'twitter154.p.rapidapi.com', 'Avilabe_requests_per_month': 89}]
+[2025-04-07T06:27:01.322+0000] {logging_mixin.py:190} INFO - API file is modified
+[2025-04-07T06:27:01.324+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-04-07T06:27:01.337+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-07T06:27:01.338+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=monitor_the_api_history_per_day, task_id=read_the_api_file_and_add_requests, run_id=manual__2025-04-07T06:26:47.645537+00:00, execution_date=20250407T062647, start_date=20250407T062700, end_date=20250407T062701
+[2025-04-07T06:27:01.372+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-04-07T06:27:01.373+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-04-07T06:27:01.374+0000] {logging_mixin.py:190} INFO - Dag name:monitor_the_api_history_per_day queued_at:2025-04-07 06:26:47.669838+00:00
+[2025-04-07T06:27:01.375+0000] {logging_mixin.py:190} INFO - Task hostname:c10f653d5b77 operator:PythonOperator
+[2025-04-07T06:27:01.403+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-07T06:27:01.416+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

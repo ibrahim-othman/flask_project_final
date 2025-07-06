@@ -22,7 +22,9 @@ token_auth = HTTPTokenAuth()
 
 
 
-
+def log(x):
+    with open('a.txt','a') as f:
+        f.write(str(x))
 
 
 @token_auth.verify_token
@@ -207,7 +209,7 @@ def proccess_requests(app):
                                 result_id=result.result_id,
                                 tweet_id=subData.get('tweet_id'),
                                 creation_date= None if subData.get('creation_date') is None else datetime.strptime(subData.get('creation_date'),"%a %b %d %H:%M:%S %z %Y").date(),
-                                text=subData.get('text', ''),
+                                text=subData.get('text'),
                                 language=subData.get('language'),
                                 favorite_count=subData.get('favorite_count'),
                                 retweet_count=subData.get('retweet_count'),
@@ -249,7 +251,7 @@ def proccess_requests(app):
                                 result_id=result.result_id,
                                 tweet_id=subData.get('post_id'),
                                 creation_date= None if subData.get('timestamp') is None else datetime.strptime(subData.get('timestamp'),"%d/%m/%Y").date(),
-                                text=subData.get('message', ''),
+                                text=subData.get('message') if subData.get('message') else 'empty',
                                 favorite_count=subData.get('reactions_count'),
                                 retweet_count=subData.get('reshare_count'),
                                 reply_count=subData.get('comments_count'),
@@ -262,6 +264,7 @@ def proccess_requests(app):
                             )
                             db.session.add(subresult)
                         except Exception as e:
+                            log(f'exception is {e}')
                             db.session.rollback()
                             traceback.print_exc()
 
@@ -335,6 +338,9 @@ def get_profile():
             rs = {k:v for k,v in rs.items() if k not in {
                     '_sa_instance_state'
                 }}
+            rs['start_date']= rs['start_date'].strftime("%Y-%m-%d")
+            rs['end_date']= rs['end_date'].strftime("%Y-%m-%d")
+
             print(rs)
             if rs['request_id'] in answered_requests_ids:
                 requests_done.append(rs)
@@ -372,6 +378,9 @@ def dashboard():
             req = {k:v for k,v in req.items() if k not in {
                 '_sa_instance_state'
             }}
+
+            req['start_date']= req['start_date'].strftime("%Y-%m-%d")
+            req['end_date']= req['end_date'].strftime("%Y-%m-%d")
             print(f'req = {req}')
 
             sentiments = {'positive':'', 'negative':'','neutral':''}
